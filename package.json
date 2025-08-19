@@ -1,0 +1,55 @@
+{
+  "name": "medical-records-smart-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for decentralized medical records management with patient-controlled access",
+  "main": "index.js",
+  "scripts": {
+    "init-project": "node scripts/init-setup.js",
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "check": "npx hardhat run scripts/pre-deploy-check.js",
+    "deploy:arbitrum-sepolia": "npx hardhat run scripts/deploy.js --network arbitrumSepolia",
+    "deploy:arbitrum-mainnet": "npx hardhat run scripts/deploy.js --network arbitrumOne",
+    "deploy:localhost": "npx hardhat run scripts/deploy.js --network localhost",
+    "verify:arbitrum-sepolia": "npx hardhat run scripts/verify.js --network arbitrumSepolia",
+    "verify:arbitrum-mainnet": "npx hardhat run scripts/verify.js --network arbitrumOne",
+    "interact:arbitrum-sepolia": "npx hardhat run scripts/interact.js --network arbitrumSepolia",
+    "interact:arbitrum-mainnet": "npx hardhat run scripts/interact.js --network arbitrumOne",
+    "interact:localhost": "npx hardhat run scripts/interact.js --network localhost",
+    "node": "npx hardhat node",
+    "clean": "npx hardhat clean",
+    "size": "npx hardhat size-contracts",
+    "gas": "REPORT_GAS=true npx hardhat test",
+    "setup": "node scripts/check-setup.js",
+    "balance": "node scripts/check-balance.js",
+    "quick-deploy": "node scripts/quick-deploy.js"
+  },
+  "keywords": [
+    "solidity",
+    "smart-contracts",
+    "medical-records",
+    "blockchain",
+    "healthcare",
+    "access-control",
+    "audit-trail"
+  ],
+  "author": "Medical Records DApp Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^5.0.0",
+    "hardhat": "^2.19.0",
+    "hardhat-gas-reporter": "^1.0.9",
+    "hardhat-contract-sizer": "^2.10.0",
+    "dotenv": "^16.3.1"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/medical-records-contracts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/medical-records-contracts/issues"
+  },
+  "homepage": "https://github.com/your-org/medical-records-contracts#readme"
+}

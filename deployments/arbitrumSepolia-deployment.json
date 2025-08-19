@@ -1,0 +1,19 @@
+{
+  "network": "arbitrumSepolia",
+  "deployer": "0x44f787B0B086Fe98D7eceed6C62d316F03180994",
+  "timestamp": "2025-08-03T10:23:58.443Z",
+  "contracts": {
+    "accessControl": {
+      "address": "0xE581f2a4840fdb1CAc660876Fdd512980846Ad04",
+      "txHash": "0x52b027616134c8920c7516e4019ff1e660f9461c5df75004afeb986490f36cd4"
+    },
+    "medicalRecords": {
+      "address": "0xC6902Cdd7732DFA81c3d14431D0F1de670BC1747",
+      "txHash": "0x88c26bee01c2b4d9a4a75f2cbbdf19b567d0aed363a01697c2023436b3240e27"
+    },
+    "auditTrail": {
+      "address": "0xD587fA568C2a48a9ae8b5793796C9e71c201f059",
+      "txHash": "0x0dfff7e4eedf8fce53ebbd4f1d969fd163e73f4a9a0012e69dc9100d48512ac0"
+    }
+  }
+}
