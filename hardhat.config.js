@@ -16,15 +16,20 @@ module.exports = {
   networks: {
     // Arbitrum Sepolia (Testnet)
     arbitrumSepolia: {
-      url: process.env.ARBITRUM_SEPOLIA_RPC_URL || "https://sepolia-rollup.arbitrum.io/rpc",
-      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      url:
+        process.env.ARBITRUM_SEPOLIA_RPC_URL ||
+        "https://sepolia-rollup.arbitrum.io/rpc",
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
       chainId: 421614,
       gasPrice: 100000000, // 0.1 gwei
     },
     // Arbitrum One (Mainnet)
     arbitrumOne: {
-      url: process.env.ARBITRUM_MAINNET_RPC_URL || "https://arb1.arbitrum.io/rpc",
-      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      url:
+        process.env.ARBITRUM_MAINNET_RPC_URL || "https://arb1.arbitrum.io/rpc",
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
       chainId: 42161,
       gasPrice: 100000000, // 0.1 gwei
     },
@@ -35,10 +40,7 @@ module.exports = {
     },
   },
   etherscan: {
-    apiKey: {
-      arbitrumOne: process.env.ARBISCAN_API_KEY || "",
-      arbitrumSepolia: process.env.ARBISCAN_API_KEY || "",
-    },
+    apiKey: process.env.ETHERSCAN_API_KEY,
     customChains: [
       {
         network: "arbitrumSepolia",
@@ -46,6 +48,14 @@ module.exports = {
         urls: {
           apiURL: "https://api-sepolia.arbiscan.io/api",
           browserURL: "https://sepolia.arbiscan.io/",
+        },
+      },
+      {
+        network: "arbitrumOne",
+        chainId: 42161,
+        urls: {
+          apiURL: "https://api.arbiscan.io/api",
+          browserURL: "https://arbiscan.io/",
         },
       },
     ],
