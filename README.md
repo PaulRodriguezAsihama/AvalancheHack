@@ -48,8 +48,8 @@ flowchart TD
     A -->|Monitors & Audits| BC
     P -->|Encrypted Records| BC
 ```
-
 ---
+    Permissions flow
 ---
 ```mermaid
 flowchart TD
@@ -85,7 +85,7 @@ flowchart TD
 ```
 
 ---
-
+    Back End flow
 ## 🔐 Security & Privacy
 
 - **Encryption**: All sensitive data is encrypted before storage.  
