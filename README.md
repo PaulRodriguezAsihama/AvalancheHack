@@ -50,6 +50,41 @@ flowchart TD
 ```
 
 ---
+---
+```mermaid
+flowchart TD
+    %% Level 1
+    P[👤 Patient Holder] --> D[📄 Document Admin]
+    P --> AP[⚙️ Permission Admin]
+
+    %% Level 2 - CRUD operations on documents
+    D --> C[➕ Create]
+    D --> M[✏️ Modify]
+    D --> R[📖 Read]
+    D --> DEL[🗑️ Delete]
+
+    %% Connection from permission administration to CRUD
+    AP --> C
+    AP --> M
+    AP --> R
+
+    %% Level 3 - Permission options
+    AP --> DEL[🗑️ Delete]
+    AP --> SD[📂 Specific Document]
+    AP --> H[📜 Patient History]
+
+    %% Sector filtering
+    DEL --> FS[🏢 Sector Filtering]
+    SD --> FS
+    H --> FS
+
+    %% Level 4 - Entities
+    EA[🏛️ Entity Type A] --> FS
+    FS --> V[✅ Valid if Sector A ∈ Entity A]
+    EB[🏛️ Entity Type B] --> FS
+```
+
+---
 
 ## 🔐 Security & Privacy
 
